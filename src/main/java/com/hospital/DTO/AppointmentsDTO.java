@@ -9,6 +9,7 @@ public class AppointmentsDTO {
     private Time time;
     private int patientId;
     private int doctorId;
+    private int nurseId;
 
     // Getters and setters
 
@@ -50,5 +51,13 @@ public class AppointmentsDTO {
 
     public void setDoctorId(int doctorId) {
         this.doctorId = doctorId;
+    }
+
+    public int getNurseId() {
+        return nurseId;
+    }
+
+    public void setNurseId(int nurseId) { 
+        this.nurseId = nurseId;
     }
 }

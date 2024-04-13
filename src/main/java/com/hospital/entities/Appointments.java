@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 public class Appointments {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private Date appointment_date;
     private Time appointment_time;
 
@@ -33,7 +33,7 @@ public class Appointments {
     private Nurses nurse;
 
     // Getters
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
