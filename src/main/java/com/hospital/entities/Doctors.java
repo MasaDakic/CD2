@@ -1,12 +1,17 @@
 package com.hospital.entities;
 
-import com.hospital.entities.Departments;
 import jakarta.persistence.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name = "doctors", schema = "hospitaldb")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Doctors {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,12 +21,15 @@ public class Doctors {
 
     @ManyToOne
     @JoinColumn(name = "department_id")
+    @JsonManagedReference
     private Departments department;
 
     @OneToMany(mappedBy = "doctor")
+    @JsonBackReference
     private List<Appointments> appointments;
 
     @OneToMany(mappedBy = "doctor")
+    @JsonBackReference
     private List<Prescriptions> prescriptions;
 
     // Getters
@@ -35,6 +43,10 @@ public class Doctors {
 
     public String getSpecialty() {
         return specialty;
+    }
+
+    public Integer getDepartmentId() {
+        return department != null ? department.getId() : null;
     }
 
     public Departments getDepartment() {

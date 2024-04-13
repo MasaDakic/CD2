@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name = "departments", schema = "hospitaldb")
 public class Departments {
@@ -12,10 +14,12 @@ public class Departments {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "department")
+    @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+    @JsonManagedReference
     private List<Doctors> doctors;
 
-    @OneToMany(mappedBy = "department")
+    @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+    @JsonManagedReference
     private List<Nurses> nurses;
 
     // Getters

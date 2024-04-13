@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 @Table(name = "prescriptions", schema = "hospitaldb")
 public class Prescriptions {
@@ -14,6 +16,7 @@ public class Prescriptions {
 
     @ManyToOne
     @JoinColumn(name = "doctor_id")
+    @JsonBackReference
     private Doctors doctor;
 
     @ManyToOne
