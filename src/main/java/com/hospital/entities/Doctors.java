@@ -85,4 +85,11 @@ public class Doctors {
     public void setPrescriptions(List<Prescriptions> prescriptions) {
         this.prescriptions = prescriptions;
     }
+
+    public void setDepartmentId(int departmentId) {
+        if (this.department == null) {
+            this.department = new Departments();
+        }
+        this.department.setId(departmentId);
+    }
 }

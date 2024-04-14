@@ -43,23 +43,4 @@ public class AppointmentsRepository {
         return jpaStreamer.stream(Appointments.class)
                 .collect(Collectors.toList());
     }
-
-    @Transactional
-    public Appointments save(Appointments appointment) {
-        if (appointment.getId() == null) {
-            entityManager.persist(appointment);
-            return appointment;
-        } else {
-            return entityManager.merge(appointment);
-        }
-    }
-
-    @Transactional
-    public void delete(Appointments appointment) {
-        if (entityManager.contains(appointment)) {
-            entityManager.remove(appointment);
-        } else {
-            entityManager.remove(entityManager.merge(appointment));
-        }
-    }
 }
