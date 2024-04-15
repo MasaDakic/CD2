@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Java 11 or higher
+- Java 17
 - Maven
 - XAMPP for MySQL
 
@@ -48,8 +48,3 @@ Please replace `{id}` with the ID of the doctor you want to access or modify.
 - [Quarkus](https://quarkus.io/)
 - [MySQL](https://www.mysql.com/)
 - [XAMPP](https://www.apachefriends.org/index.html)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-```
