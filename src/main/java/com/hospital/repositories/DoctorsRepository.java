@@ -43,12 +43,9 @@ public class DoctorsRepository {
 
     @Transactional
     public void delete(Doctors doctor) {
-        System.out.println("Deleting doctor: " + doctor);
         if (entityManager.contains(doctor)) {
-            System.out.println("Doctor is managed. Removing directly.");
             entityManager.remove(doctor);
         } else {
-            System.out.println("Doctor is not managed. Merging and then removing.");
             entityManager.remove(entityManager.merge(doctor));
         }
     }
