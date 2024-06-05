@@ -1,6 +1,5 @@
 package com.hospital.entities;
 
-import com.hospital.entities.Departments;
 import jakarta.persistence.*;
 
 import java.util.List;

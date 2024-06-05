@@ -1,5 +1,6 @@
-package com.hospital.client;
+package com.hospital.repositories;
 
+import com.hospital.client.Country;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;

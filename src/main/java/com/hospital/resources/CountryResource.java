@@ -1,5 +1,7 @@
-package com.hospital.client;
+package com.hospital.resources;
 
+import com.hospital.client.Country;
+import com.hospital.client.CountryService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

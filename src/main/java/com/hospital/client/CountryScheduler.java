@@ -1,5 +1,6 @@
 package com.hospital.client;
 
+import com.hospital.repositories.CountryRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import io.quarkus.scheduler.Scheduled;

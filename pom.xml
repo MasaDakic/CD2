@@ -42,16 +42,7 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-rest-client-reactive-jackson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
             <artifactId>quarkus-smallrye-openapi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkiverse.groovy</groupId>
-            <artifactId>quarkus-groovy-hibernate-orm-panache</artifactId>
-            <version>3.9.1</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
