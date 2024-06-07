@@ -12,6 +12,7 @@ public class Medications {
     private int id;
     private String name;
     private String description;
+    private String instructionFilePath;
 
     @OneToMany(mappedBy = "medication")
     private List<Prescriptions> prescriptions;
@@ -29,6 +30,10 @@ public class Medications {
         return description;
     }
 
+    public String getInstructionFilePath() {
+        return instructionFilePath;
+    }
+
     public List<Prescriptions> getPrescriptions() {
         return prescriptions;
     }
@@ -44,6 +49,10 @@ public class Medications {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setInstructionFilePath(String instructionFilePath) {
+        this.instructionFilePath = instructionFilePath;
     }
 
     public void setPrescriptions(List<Prescriptions> prescriptions) {

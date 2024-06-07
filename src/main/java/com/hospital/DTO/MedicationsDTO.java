@@ -5,6 +5,7 @@ public class MedicationsDTO {
     private String name;
     private String description;
     private String sideEffects;
+    private String instructionFilePath;
 
     // Getters and setters
 
@@ -38,5 +39,13 @@ public class MedicationsDTO {
 
     public void setSideEffects(String sideEffects) {
         this.sideEffects = sideEffects;
+    }
+
+    public String getInstructionFilePath() {
+        return instructionFilePath;
+    }
+
+    public void setInstructionFilePath(String instructionFilePath) {
+        this.instructionFilePath = instructionFilePath;
     }
 }
