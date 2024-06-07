@@ -20,12 +20,9 @@ services:
       context: .
       dockerfile: src/main/docker/Dockerfile.jvm
     environment:
-      QUARKUS_DATASOURCE_DB_KIND: mysql
-      QUARKUS_DATASOURCE_JDBC_DRIVER: com.mysql.cj.jdbc.Driver
       QUARKUS_DATASOURCE_JDBC_URL: jdbc:mysql://db:3306/hospitaldb
       QUARKUS_DATASOURCE_USERNAME: root
       QUARKUS_DATASOURCE_PASSWORD: root
-      QUARKUS_HIBERNATE_ORM_LOG_SQL: true
     depends_on:
       - db
     ports:
